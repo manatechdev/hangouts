@@ -1,5 +1,7 @@
 import logo from "./logo.svg";
 import "./App.css";
+import Button from "./components/Button";
+import { BeakerIcon } from "@heroicons/react/24/solid";
 
 function App() {
   return (
@@ -15,8 +17,9 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+          Learn React{" "}
         </a>
+        <Button label="What" iconStart={<BeakerIcon className="h-6 w-6" />} />
       </header>
     </div>
   );

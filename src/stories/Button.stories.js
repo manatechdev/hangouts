@@ -1,15 +1,13 @@
-import Button from "../components/Button"
+import Button from "../components/Button";
 
 export default {
   title: "Components/Button",
-  component: Button
-}
+  component: Button,
+};
 
-const Template = args => <Button {...args} />
+const Template = (args) => <Button {...args} />;
 
-export const Red = () => Template.bind({})
+export const Red = Template.bind({});
 Red.args = {
-  backgroundColor: "red",
-  label: "Press Me",
-  size: "md",
-}
+  label: "Press Me!",
+};
