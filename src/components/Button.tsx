@@ -7,13 +7,10 @@ const getSizeClasses = (size: string) => {
       return "h-14 px-6 py-4"; //TODO: Must change
     }
     case "md": {
-      return "h-[52px] p-4"; //TODO: Must change
-    }
-    case "lg": {
-      return "h-14 px-6 py-4"; //TODO: Must change
+      return "h-14 p-4"; //TODO: Must change
     }
     default: {
-      return "h-[52px] p-4";
+      return "h-14 p-4";
     }
   }
 };
@@ -25,7 +22,7 @@ const getVariantClasses = (variant: string) => {
       return "bg-hyellow-700";
     }
     case "secondary": {
-      return "p-3 border-2 border-solid border-black-500 bg-transparent";
+      return "p-[14px] border-2 border-solid border-black-500 bg-transparent";
     }
     case "ghost": {
       return "bg-hgray-100";
@@ -88,7 +85,7 @@ function Button({
       )}
       {label && (
         <div className="font-semibold flex place-content-center h-6">
-          <p className="text-lg/6">{label}</p>
+          <p className="text-lg">{label}</p>
         </div>
       )}
       {iconEnd && (
