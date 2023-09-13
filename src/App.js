@@ -19,7 +19,11 @@ function App() {
         >
           Learn React{" "}
         </a>
-        <Button label="What" iconStart={<BeakerIcon className="h-6 w-6" />} />
+        <Button
+          label="What"
+          variant="secondary"
+          iconStart={<BeakerIcon className="h-6 w-6" />}
+        />
       </header>
     </div>
   );
