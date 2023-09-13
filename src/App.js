@@ -21,7 +21,17 @@ function App() {
         </a>
         <Button
           label="What"
+          variant="primary"
+          iconStart={<BeakerIcon className="h-6 w-6" />}
+        />
+        <Button
+          label="What"
           variant="secondary"
+          iconStart={<BeakerIcon className="h-6 w-6" />}
+        />
+        <Button
+          label="What"
+          variant="ghost"
           iconStart={<BeakerIcon className="h-6 w-6" />}
         />
       </header>

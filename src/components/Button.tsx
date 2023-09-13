@@ -7,13 +7,13 @@ const getSizeClasses = (size: string) => {
       return "h-14 px-6 py-4"; //TODO: Must change
     }
     case "md": {
-      return "h-14 px-6 py-4"; //TODO: Must change
+      return "h-[52px] p-4"; //TODO: Must change
     }
     case "lg": {
       return "h-14 px-6 py-4"; //TODO: Must change
     }
     default: {
-      return "h-14 px-6 py-4";
+      return "h-[52px] p-4";
     }
   }
 };
@@ -22,10 +22,10 @@ const getVariantClasses = (variant: string) => {
   console.log(variant);
   switch (variant) {
     case "primary": {
-      return "bg-hyellow-500";
+      return "bg-hyellow-700";
     }
     case "secondary": {
-      return "border border-solid border-black-500";
+      return "p-3 border-2 border-solid border-black-500 bg-transparent";
     }
     case "ghost": {
       return "bg-hgray-100";
@@ -37,21 +37,22 @@ const getIconSizeClasses = (size: string) => {
   console.log(size);
   switch (size) {
     case "sm": {
-      return "box-border h-6 w-6"; //TODO: Must change
+      return "h-6 w-6"; //TODO: Must change
     }
     case "md": {
-      return "box-border h-6 w-6"; //TODO: Must change
+      return "h-6 w-6"; //TODO: Must change
     }
     case "lg": {
-      return "box-border h-6 w-6"; //TODO: Must change
+      return "h-6 w-6"; //TODO: Must change
     }
     default: {
-      return "box-border h-6 w-6";
+      return "h-6 w-6";
     }
   }
 };
 
-const BASE_BUTTON_CLASSES = "cursor-pointer flex flex-row rounded-lg";
+const BASE_BUTTON_CLASSES =
+  "box-border cursor-pointer flex flex-row rounded-lg text-hgray-700";
 
 interface ButtonProps {
   iconStart?: any;
@@ -86,7 +87,9 @@ function Button({
         <div className={`${computedIconClasses} mr-2`}>{iconStart}</div>
       )}
       {label && (
-        <div className="box-border font-semibold text-base h-6"> {label} </div>
+        <div className="font-semibold flex place-content-center h-6">
+          <p className="text-lg/6">{label}</p>
+        </div>
       )}
       {iconEnd && (
         <div className={`${computedIconClasses} ml-2`}>{iconEnd}</div>
