@@ -1,28 +1,22 @@
 import { useMemo } from "react";
 
-const getSizeClasses = (size: string) => {
+const BASE_BUTTON_CLASSES =
+  "box-border cursor-pointer flex flex-row rounded-lg text-hgray-700";
+const getButtonSizeClasses = (size: string) => {
   console.log(size);
   switch (size) {
     case "sm": {
-      return "h-14 px-6 py-4"; //TODO: Must change
-    }
-    case "md": {
-      return "h-14 p-4"; //TODO: Must change
+      return "h-9 px-3 py-2";
     }
     default: {
-      return "h-14 p-4";
+      return "h-9 p-2";
     }
   }
 };
-
-const getVariantClasses = (variant: string) => {
-  console.log(variant);
+const getButtonVariantClasses = (variant: string) => {
   switch (variant) {
     case "primary": {
       return "bg-hyellow-700";
-    }
-    case "secondary": {
-      return "p-[14px] border-2 border-solid border-black-500 bg-transparent";
     }
     case "ghost": {
       return "bg-hgray-100";
@@ -30,26 +24,31 @@ const getVariantClasses = (variant: string) => {
   }
 };
 
-const getIconSizeClasses = (size: string) => {
-  console.log(size);
+const BASE_BUTTON_ICON_CLASSES = "";
+const getButtonIconSizeClasses = (size: string) => {
   switch (size) {
     case "sm": {
-      return "h-6 w-6"; //TODO: Must change
-    }
-    case "md": {
-      return "h-6 w-6"; //TODO: Must change
-    }
-    case "lg": {
-      return "h-6 w-6"; //TODO: Must change
+      return "h-5 w-5";
     }
     default: {
-      return "h-6 w-6";
+      return "h-5 w-5";
     }
   }
 };
 
-const BASE_BUTTON_CLASSES =
-  "box-border cursor-pointer flex flex-row rounded-lg text-hgray-700";
+const BASE_BUTTON_LABEL_CLASSES = "font-semibold flex place-content-center";
+const getButtonLabelSizeClasses = (size: string) => {
+  switch (size) {
+    case "sm": {
+      return "text-sm";
+    }
+    default: {
+      return "text-sm";
+    }
+  }
+};
+
+const BASE_SPACER_CLASSES = "mr-2";
 
 interface ButtonProps {
   iconStart?: any;
@@ -60,36 +59,41 @@ interface ButtonProps {
   variant: string;
 }
 
-function Button({
-  iconStart,
-  iconEnd,
-  label,
-  loading,
-  size,
-  variant,
-}: ButtonProps) {
-  const computedClasses = useMemo(() => {
-    const sizeClass = getSizeClasses(size);
-    const variantClass = getVariantClasses(variant);
-    return [sizeClass, variantClass].join(" ");
+function Button({ iconStart, iconEnd, label, size, variant }: ButtonProps) {
+  const computedButtonClasses = useMemo(() => {
+    const sizeClass = getButtonSizeClasses(size);
+    const variantClass = getButtonVariantClasses(variant);
+    return [BASE_BUTTON_CLASSES, sizeClass, variantClass].join(" ");
   }, [size, variant]);
+
   const computedIconClasses = useMemo(() => {
-    const iconSizeClass = getIconSizeClasses(size);
+    const iconSizeClass = getButtonIconSizeClasses(size);
     return iconSizeClass;
   }, [size]);
-  console.log(computedClasses);
+
+  const computedLabelSizeClasses = useMemo(() => {
+    const labelSizeClass = getButtonLabelSizeClasses(size);
+    return [BASE_BUTTON_LABEL_CLASSES, labelSizeClass].join(" ");
+  }, [size]);
+
   return (
-    <button className={`${BASE_BUTTON_CLASSES} ${computedClasses}`}>
+    <button className={computedButtonClasses}>
       {iconStart && (
-        <div className={`${computedIconClasses} mr-2`}>{iconStart}</div>
+        <>
+          <div className={computedIconClasses}>{iconStart}</div>
+          <div className={BASE_SPACER_CLASSES}></div>
+        </>
       )}
       {label && (
-        <div className="font-semibold flex place-content-center h-6">
-          <p className="text-lg">{label}</p>
-        </div>
+        <>
+          <div className={computedLabelSizeClasses}>{label}</div>
+        </>
       )}
       {iconEnd && (
-        <div className={`${computedIconClasses} ml-2`}>{iconEnd}</div>
+        <>
+          <div className={BASE_SPACER_CLASSES}></div>
+          <div className={computedIconClasses}>{iconEnd}</div>
+        </>
       )}
     </button>
   );
