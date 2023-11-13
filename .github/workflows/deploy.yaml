@@ -22,7 +22,7 @@ jobs:
           context: ./
           push: true
           dockerfile: ./Dockerfile
-          tags: manatechdev/todo:latest
+          tags: manatechdev/hangouts:latest
   deploy:
     needs: build
     runs-on: ubuntu-latest
