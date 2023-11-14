@@ -1,12 +1,20 @@
 import Button from "./Button";
 import { UserCircleIcon } from "@heroicons/react/20/solid";
 
-const HEADER_CLASSES = "container bg-transparent flex flex-row justify-between";
+const HEADER_CLASSES =
+  "p-4 container bg-transparent flex flex-row justify-between";
 
 function Header() {
   return (
     <div className={HEADER_CLASSES}>
-      <div>Hangouts</div>
+      <div className="flex flex-row content-center">
+        <div className="w-10 h-10">
+          <img className="rounded-lg" src={require("../assets/logo_200.png")} />
+        </div>
+        <div className="text-2xl font-extrabold ml-3 flex flex-row items-center">
+          <p>Portal</p>
+        </div>
+      </div>
       <Button
         size="sm"
         variant="ghost"
