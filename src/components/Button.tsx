@@ -54,16 +54,25 @@ interface ButtonProps {
   iconStart?: any;
   iconEnd?: any;
   label?: string;
-  loading: boolean;
   size: string;
   variant: string;
+  customStyle?: string;
 }
 
-function Button({ iconStart, iconEnd, label, size, variant }: ButtonProps) {
+function Button({
+  iconStart,
+  iconEnd,
+  label,
+  size,
+  variant,
+  customStyle,
+}: ButtonProps) {
   const computedButtonClasses = useMemo(() => {
     const sizeClass = getButtonSizeClasses(size);
     const variantClass = getButtonVariantClasses(variant);
-    return [BASE_BUTTON_CLASSES, sizeClass, variantClass].join(" ");
+    return [BASE_BUTTON_CLASSES, sizeClass, variantClass, customStyle].join(
+      " "
+    );
   }, [size, variant]);
 
   const computedIconClasses = useMemo(() => {
