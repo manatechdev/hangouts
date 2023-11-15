@@ -1,17 +1,20 @@
 import "./App.css";
 import Header from "./components/Header";
+import Body from "./components/Body";
+import Footer from "./components/Footer";
+import Sidebar from "./components/Sidebar";
+import Content from "./components/Content";
 
 function App() {
   return (
     <div className="App">
-      <div className="bg-hyellow-50 min-h-screen">
+      <div className="">
         <Header />
-        <div className="min-h-screen flex flex-row justify-center items-center">
-          <div>
-            We are still working on developing the website... <br />
-            Check back again soon!
-          </div>
-        </div>
+        <Body>
+          <Sidebar />
+          <Content />
+        </Body>
+        <Footer />
       </div>
     </div>
   );
