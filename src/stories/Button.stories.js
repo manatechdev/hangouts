@@ -1,5 +1,4 @@
 import Button from "../components/Button";
-import { CheckCircleIcon } from "@heroicons/react/20/solid";
 
 export default {
   title: "Components/Button",
@@ -20,7 +19,7 @@ PrimaryIconStart.args = {
   label: "Press Me",
   size: "sm",
   variant: "primary",
-  iconStart: <CheckCircleIcon />,
+  iconStart: "informationCircle",
 };
 
 export const PrimaryIconEnd = Template.bind({});
@@ -28,7 +27,7 @@ PrimaryIconEnd.args = {
   label: "Press Me",
   size: "sm",
   variant: "primary",
-  iconEnd: <CheckCircleIcon />,
+  iconEnd: "informationCircle",
 };
 
 export const Ghost = Template.bind({});
@@ -36,5 +35,5 @@ Ghost.args = {
   label: "Press Me",
   size: "sm",
   variant: "ghost",
-  iconStart: <CheckCircleIcon />,
+  iconStart: "informationCircle",
 };

@@ -4,7 +4,7 @@ export default {
   title: "Components/Icon",
   component: Icon,
   argTypes: {
-    icon: {
+    type: {
       options: [
         "academicCap",
         "adjustmentsHorizontal",
@@ -24,5 +24,5 @@ const Template = (args) => <Icon {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {
-  icon: "academicCap",
+  type: "academicCap",
 };

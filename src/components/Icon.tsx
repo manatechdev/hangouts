@@ -28,10 +28,11 @@ const icons: Icons = {
 };
 
 interface IconProps {
-  icon: string;
+  type: string;
+  customStyle?: string;
 }
 
-function Icon({ icon }: IconProps) {
+function Icon({ type, customStyle }: IconProps) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -39,12 +40,12 @@ function Icon({ icon }: IconProps) {
       viewBox="0 0 24 24"
       stroke-width="1.5"
       stroke="currentColor"
-      className="w-6 h-6"
+      className={`w-5 h-5 ${customStyle}`}
     >
       <path
         stroke-linecap="round"
         stroke-linejoin="round"
-        d={(icons as any)[icon]}
+        d={(icons as any)[type]}
       />
     </svg>
   );
