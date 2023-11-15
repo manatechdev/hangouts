@@ -38,7 +38,7 @@ function Icon({ type, customStyle }: IconProps) {
       xmlns="http://www.w3.org/2000/svg"
       fill="none"
       viewBox="0 0 24 24"
-      stroke-width="1.5"
+      stroke-width="1.8"
       stroke="currentColor"
       className={`w-5 h-5 ${customStyle}`}
     >
