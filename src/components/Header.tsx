@@ -19,7 +19,7 @@ function Header() {
         size="sm"
         variant="ghost"
         label="Account"
-        iconStart={<UserCircleIcon />}
+        iconStart="userCircle"
         customStyle="bg-opacity-0"
       />
     </div>

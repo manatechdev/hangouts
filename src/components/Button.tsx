@@ -1,9 +1,9 @@
 import { useMemo } from "react";
+import Icon from "./Icon";
 
 const BASE_BUTTON_CLASSES =
   "box-border cursor-pointer flex flex-row rounded-lg text-hgray-700";
 const getButtonSizeClasses = (size: string) => {
-  console.log(size);
   switch (size) {
     case "sm": {
       return "h-9 px-3 py-2";
@@ -51,8 +51,8 @@ const getButtonLabelSizeClasses = (size: string) => {
 const BASE_SPACER_CLASSES = "mr-2";
 
 interface ButtonProps {
-  iconStart?: any;
-  iconEnd?: any;
+  iconStart?: string;
+  iconEnd?: string;
   label?: string;
   size: string;
   variant: string;
@@ -89,7 +89,9 @@ function Button({
     <button className={computedButtonClasses}>
       {iconStart && (
         <>
-          <div className={computedIconClasses}>{iconStart}</div>
+          <div className={computedIconClasses}>
+            <Icon type={iconStart} />
+          </div>
           <div className={BASE_SPACER_CLASSES}></div>
         </>
       )}
@@ -101,7 +103,7 @@ function Button({
       {iconEnd && (
         <>
           <div className={BASE_SPACER_CLASSES}></div>
-          <div className={computedIconClasses}>{iconEnd}</div>
+          <Icon type={iconEnd} />
         </>
       )}
     </button>
