@@ -4,14 +4,17 @@ import Body from "./components/Body";
 import Footer from "./components/Footer";
 import Sidebar from "./components/Sidebar";
 import Content from "./components/Content";
+import SidebarNav from "./components/SidebarNav";
 
 function App() {
   return (
     <div className="App">
-      <div className="">
+      <div className="px-2">
         <Header />
         <Body>
-          <Sidebar />
+          <Sidebar>
+            <SidebarNav />
+          </Sidebar>
           <Content />
         </Body>
         <Footer />
