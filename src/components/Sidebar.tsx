@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-const SIDEBAR_CLASSES = "bg-hred-100 w-1/4 px-4";
+const SIDEBAR_CLASSES = "bg-hred-100 w-1/4 p-4";
 
 interface SidebarProps {
   children?: ReactNode;
