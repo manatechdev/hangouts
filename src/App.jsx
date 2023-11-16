@@ -4,16 +4,16 @@ import Body from "./components/Body";
 import Footer from "./components/Footer";
 import Sidebar from "./components/Sidebar";
 import Content from "./components/Content";
-import SidebarNav from "./components/SidebarNav";
+import SideNav from "./components/SideNav";
 
 function App() {
   return (
     <div className="App">
-      <div className="px-2 bg-hyellow-50">
+      <div className="px-2">
         <Header />
         <Body>
           <Sidebar>
-            <SidebarNav />
+            <SideNav />
           </Sidebar>
           <Content />
         </Body>
