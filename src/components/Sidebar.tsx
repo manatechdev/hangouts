@@ -11,8 +11,8 @@ function Sidebar({ children }: SidebarProps) {
     <div className="w-1/4 p-4 bg-hred-100">
       <SideNav>
         <SideNavItem icon="calendarDays" label="Upcoming" selected />
+        <SideNavItem icon="users" label="Community" />
         <SideNavItem icon="cog" label="Settings" />
-        <SideNavItem icon="cog" label="Payments" />
       </SideNav>
     </div>
   );

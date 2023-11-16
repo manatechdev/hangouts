@@ -9,7 +9,7 @@ import SideNav from "./components/SideNav";
 function App() {
   return (
     <div className="App">
-      <div className="px-2">
+      <div className="container px-2 mx-auto">
         <Header />
         <Body>
           <Sidebar>
