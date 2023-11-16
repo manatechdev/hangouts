@@ -1,7 +1,11 @@
-const CONTENT_CLASSES = "bg-hgreen-300 w-3/4";
+import UnderDevelopment from "./UnderDevelopment";
 
 function Content() {
-  return <div className={CONTENT_CLASSES}></div>;
+  return (
+    <div className="w-3/4">
+      <UnderDevelopment />
+    </div>
+  );
 }
 
 export default Content;

@@ -1,7 +1,11 @@
-const FOOTER_CLASSES = "bg-hgreen-300 h-24";
+import UnderDevelopment from "./UnderDevelopment";
 
 function Footer() {
-  return <div className={FOOTER_CLASSES}></div>;
+  return (
+    <div className="h-24">
+      <UnderDevelopment />
+    </div>
+  );
 }
 
 export default Footer;
