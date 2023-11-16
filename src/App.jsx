@@ -9,7 +9,7 @@ import SidebarNav from "./components/SidebarNav";
 function App() {
   return (
     <div className="App">
-      <div className="px-2">
+      <div className="px-2 bg-hyellow-50">
         <Header />
         <Body>
           <Sidebar>
