@@ -1,4 +1,5 @@
 import { ReactNode } from "react";
+import { Link } from "react-router-dom";
 import SideNav from "./SideNav";
 import SideNavItem from "./SideNavItem";
 
@@ -10,9 +11,15 @@ function Sidebar({ children }: SidebarProps) {
   return (
     <div className="w-1/4 p-4 bg-hred-100">
       <SideNav>
-        <SideNavItem icon="calendarDays" label="Upcoming" selected />
-        <SideNavItem icon="users" label="Community" />
-        <SideNavItem icon="cog" label="Settings" />
+        <Link to="/">
+          <SideNavItem icon="calendarDays" label="Upcoming" selected />
+        </Link>
+        <Link to="/community">
+          <SideNavItem icon="users" label="Community" />
+        </Link>
+        <Link to="/settings">
+          <SideNavItem icon="cog" label="Settings" />
+        </Link>
       </SideNav>
     </div>
   );
