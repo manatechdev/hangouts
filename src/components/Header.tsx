@@ -2,7 +2,7 @@ import Button from "./Button";
 import { UserCircleIcon } from "@heroicons/react/20/solid";
 
 const HEADER_CLASSES =
-  "py-4 px-6 bg-transparent flex flex-row justify-between mx-auto";
+  "py-4 px-4 bg-transparent flex flex-row justify-between mx-auto";
 
 function Header() {
   return (
