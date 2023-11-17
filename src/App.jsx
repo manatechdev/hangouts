@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
+import Dashboard from "./views/Dashboard";
 import Header from "./components/Header";
 import Body from "./components/Body";
 import Footer from "./components/Footer";
@@ -20,7 +21,7 @@ function App() {
             </Sidebar>
             <Content>
               <Routes>
-                <Route index element={<div>Upcoming</div>} />
+                <Route index element={<Dashboard />} />
                 <Route
                   path="/community"
                   element={
