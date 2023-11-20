@@ -2,7 +2,7 @@ import EventTile from "../components/EventTile";
 
 const mockEventList = [
   {
-    title: "Dinner w. Book Club",
+    title: "Dinner w/ Book Club",
     dateTime: "Nov 24, 2023 7:00pm",
   },
   {

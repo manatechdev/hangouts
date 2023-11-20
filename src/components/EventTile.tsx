@@ -15,7 +15,7 @@ function EventTile({ event }: EventTileProps) {
             <img></img>
           </div>
           <div className="flex flex-col ml-4">
-            <div className="h-6 font-semibold">{title}</div>
+            <div className="h-6 font-semibold text-left">{title}</div>
             <div className="h-6 text-left">{dateTime}</div>
           </div>
         </div>
