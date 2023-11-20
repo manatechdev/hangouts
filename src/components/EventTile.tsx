@@ -8,7 +8,7 @@ interface EventTileProps {
 function EventTile({ event }: EventTileProps) {
   let { title, dateTime } = event;
   return (
-    <div className="h-24 p-6 mb-4 rounded-md shadow border-hgray-400">
+    <div className="h-24 p-6 mb-4 rounded-md border-[0.5px] bg-hyellow-50 border-hgray-200">
       <div className="flex flex-row justify-between h-12">
         <div className="flex flex-row h-12">
           <div className="w-12 h-12 rounded bg-hgray-400">

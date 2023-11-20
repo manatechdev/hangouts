@@ -36,7 +36,7 @@ const getButtonIconSizeClasses = (size: string) => {
   }
 };
 
-const BASE_BUTTON_LABEL_CLASSES = "font-semibold flex place-content-center";
+const BASE_BUTTON_LABEL_CLASSES = "font-medium flex place-content-center";
 const getButtonLabelSizeClasses = (size: string) => {
   switch (size) {
     case "sm": {

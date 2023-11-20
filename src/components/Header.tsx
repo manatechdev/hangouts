@@ -1,4 +1,5 @@
 import Button from "./Button";
+import Icon from "./Icon";
 import { UserCircleIcon } from "@heroicons/react/20/solid";
 
 const HEADER_CLASSES =
@@ -11,17 +12,16 @@ function Header() {
         <div className="w-10 h-10">
           <img className="rounded-lg" src={require("../assets/logo_200.png")} />
         </div>
-        <div className="text-2xl font-extrabold ml-3 flex flex-row items-center">
+        <div className="flex flex-row items-center ml-3 text-2xl font-extrabold">
           <p>Portal</p>
         </div>
       </div>
-      <Button
-        size="sm"
-        variant="ghost"
-        label="Account"
-        iconStart="userCircle"
-        customStyle="bg-opacity-0"
-      />
+      <div className="flex flex-row items-center h-10 rounded-lg">
+        <div className="flex flex-row h-10 p-2 text-hgray-400">
+          <Icon type="userCircle" customStyle="w-5 h-5" />
+          <div className="ml-2 text-base font-medium">mackaykillian</div>
+        </div>
+      </div>
     </div>
   );
 }
