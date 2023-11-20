@@ -5,7 +5,7 @@ interface BodyProps {
 }
 
 function Body({ children }: BodyProps) {
-  return <div className="flex flex-row min-h-screen">{children}</div>;
+  return <div className="flex flex-row min-h-screen p-4">{children}</div>;
 }
 
 export default Body;

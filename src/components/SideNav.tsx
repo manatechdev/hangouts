@@ -6,7 +6,7 @@ interface SideNavProps {
 }
 
 function SideNav({ children }: SideNavProps) {
-  return <div className="p-4">{children}</div>;
+  return <div className="pt-4 pb-4 pr-4">{children}</div>;
 }
 
 export default SideNav;
